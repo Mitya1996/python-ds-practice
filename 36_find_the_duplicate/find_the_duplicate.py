@@ -13,3 +13,28 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    # frequency = {}
+
+    # for num in nums:
+    #     frequency[num] = frequency.get(num, 0) + 1
+
+    # for num in frequency:
+    #     if frequency[num] == 2:
+    #         return num
+
+    ##########
+
+    # nums_dict = list(enumerate(sorted(nums)))
+
+    # for i, num in nums_dict:
+    #     if num == nums_dict[i + 1]:
+    #         return num
+
+    ##################
+
+    seen = set()
+
+    for num in nums:
+        if num in seen:
+            return num
+        seen.add(num)

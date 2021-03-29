@@ -7,3 +7,6 @@ def list_check(lst):
         >>> list_check([[1], "nope"])
         False
     """
+    return len([item for item in lst if isinstance(item, list)]) == len(lst)
+
+    #return all([isinstance(item, list) for item in lst]) 

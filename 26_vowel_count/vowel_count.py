@@ -7,3 +7,12 @@ def vowel_count(phrase):
         >>> vowel_count('HOW ARE YOU? i am great!') 
         {'o': 2, 'a': 3, 'e': 2, 'u': 1, 'i': 1}
     """
+    freq_dict = {}
+    phrase = phrase.lower() #strings unmutable so this is k
+
+    for char in phrase:
+        if char in 'aeiou':
+            freq_dict[char] = freq_dict.get(char, 0) + 1
+    
+    return freq_dict
+    
