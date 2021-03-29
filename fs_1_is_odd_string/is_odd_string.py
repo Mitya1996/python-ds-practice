@@ -29,3 +29,9 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+    sum = 0 
+
+    for char in word.upper():
+        sum += ord(char) - 64
+
+    return sum % 2 != 0
